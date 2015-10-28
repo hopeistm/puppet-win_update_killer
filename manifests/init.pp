@@ -1,4 +1,4 @@
-# == Class: update_killer
+# == Class: win_update_killer
 #
 # Full description of class killer here.
 #
@@ -36,9 +36,15 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class win_update_killer {
-  scheduled_task { 'Apple Software Update':
+  scheduled_task { 'AppleSoftwareUpdate':
     ensure  => absent,
     enabled => false,
     command => 'C:\Program Files (x86)\Apple Software Update\SoftwareUpdate.exe'
+    }
+
+  scheduled_task { 'Adobe Acrobat Update Task':
+    ensure  => absent,
+    enabled => false,
+    command => 'C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe'
     }
 }
