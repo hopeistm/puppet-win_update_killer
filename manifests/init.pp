@@ -35,9 +35,9 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class update_killer {
+class win_update_killer {
   scheduled_task { 'Apple Software Update':
-    ensure  => present,
+    ensure  => absent,
     enabled => false,
     command => 'C:\Program Files (x86)\Apple Software Update\SoftwareUpdate.exe'
     }

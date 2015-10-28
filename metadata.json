@@ -1,8 +1,8 @@
 {
-  "name": "update_killer",
+  "name": "win_update_killer",
   "version": "0.1.0",
   "author": "Joshua HOPE",
-  "summary": "Disables update prompts on Windows",
+  "summary": "Disables update prompts on Windows for iTunes, etc",
   "license": "Apache 2.0",
   "source": "",
   "project_page": null,
