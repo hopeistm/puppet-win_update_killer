@@ -37,13 +37,13 @@
 #
 class win_update_killer {
   file { 'AppleSoftwareUpdate Task':
-    path   => 'C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate',
     ensure => absent
+    path   => 'C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate',
   }
 
   file { 'Adobe Acrobat Update Task':
-    path   => 'C:\Windows\System32\Tasks\Adobe Acrobat Update Task',
     ensure => absent
+    path   => 'C:\Windows\System32\Tasks\Adobe Acrobat Update Task',
   }
 
   scheduled_task { 'Adobe Flash Player Updater':
