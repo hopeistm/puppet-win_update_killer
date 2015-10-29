@@ -37,10 +37,9 @@
 #
 class win_update_killer {
   scheduled_task { 'AppleSoftwareUpdate':
-    ensure    => absent,
-    enabled   => false,
-    command   => 'C:\Program Files (x86)\Apple Software Update\SoftwareUpdate.exe',
-    arguments => '-task'
+    ensure  => absent,
+    enabled => false,
+    command => 'C:\Program Files (x86)\Apple Software Update\SoftwareUpdate.exe -task'
     }
 
   scheduled_task { 'Adobe Acrobat Update Task':
