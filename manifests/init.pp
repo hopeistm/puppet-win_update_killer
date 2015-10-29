@@ -37,7 +37,7 @@
 #
 class win_update_killer {
   file { "AppleSoftwareUpdate Task":
-    path    => "%systemroot%\System32\Tasks\Apple\AppleSoftwareUpdate.exe",
+    path    => "C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate.exe",
     ensure  => absent
   }
 
