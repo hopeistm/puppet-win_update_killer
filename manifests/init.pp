@@ -36,16 +36,15 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class win_update_killer {
-  file { "AppleSoftwareUpdate Task":
-    path    => "C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate",
-    ensure  => absent
+  file { 'AppleSoftwareUpdate Task':
+    path   => 'C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate',
+    ensure => absent
   }
 
-  scheduled_task { 'Adobe Acrobat Update Task':
-    ensure  => absent,
-    enabled => false,
-    command => 'C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe'
-    }
+  file { 'Adobe Acrobat Update Task':
+    path   => 'C:\Windows\System32\Tasks\Adobe Acrobat Update Task',
+    ensure => absent
+  }
 
   scheduled_task { 'Adobe Flash Player Updater':
     ensure  => absent,
