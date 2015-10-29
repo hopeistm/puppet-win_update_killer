@@ -36,11 +36,10 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class win_update_killer {
-  scheduled_task { 'AppleSoftwareUpdate':
-    ensure  => absent,
-    enabled => false,
-    command => 'C:\Program Files (x86)\Apple Software Update\SoftwareUpdate.exe -task'
-    }
+  file { "AppleSoftwareUpdate Task":
+    path    => "%systemroot%\System32\Tasks\Apple\AppleSoftwareUpdate.exe",
+    ensure  => absent
+  }
 
   scheduled_task { 'Adobe Acrobat Update Task':
     ensure  => absent,
