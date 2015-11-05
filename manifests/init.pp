@@ -37,18 +37,18 @@
 #
 class win_update_killer {
   file { 'AppleSoftwareUpdate Task':
-    ensure => absent
+    ensure => absent,
     path   => 'C:\Windows\System32\Tasks\Apple\AppleSoftwareUpdate',
   }
 
   file { 'Adobe Acrobat Update Task':
-    ensure => absent
+    ensure => absent,
     path   => 'C:\Windows\System32\Tasks\Adobe Acrobat Update Task',
   }
 
   scheduled_task { 'Adobe Flash Player Updater':
     ensure  => absent,
     enabled => false,
-    command => 'C:\Windows\SysWOW\Macromed\Flash\FlashPlayerUpdateService.exe'
+    command => 'C:\Windows\SysWOW\Macromed\Flash\FlashPlayerUpdateService.exe',
   }
 }
